@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .calculator {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .calculator input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .calculator .alert {
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="expressionInput" placeholder="Enter expression" readonly>
+        <input type="text" id="resultInput" placeholder="Result" readonly>
+        <div class="alert alert-danger" id="alertMessage" role="alert">
+            Only numbers are allowed.
+        </div>
+        <div class="row">
+            <div class="col"><button class="btn btn-primary btn-block" onclick="addToExpression(7)">7</button></div>
+            <div class="col"><button class="btn btn-primary btn-block" onclick="addToExpression(8)">8</button></div>
+            <div class="col"><button class="btn btn-primary btn-block" onclick="addToExpression(9)">9</button></div>
+            <div class="col"><button class="btn btn-secondary btn-block" onclick="addToExpression('+')">+</button></div>
+        </div>
+        <div class="row">
+            <div class="col"><button class="btn btn-primary btn-block" onclick="addToExpression(4)">4</button></div>
+            <div class="col"><button class="btn btn-primary btn-block" onclick="addToExpression(5)">5</button></div>
+            <div class="col"><button class="btn btn-primary btn-block" onclick="addToExpression(6)">6</button></div>
+            <div class="col"><button class="btn btn-secondary btn-block" onclick="addToExpression('-')">-</button></div>
+        </div>
+        <div class="row">
+            <div class="col"><button class="btn btn-primary btn-block" onclick="addToExpression(1)">1</button></div>
+            <div class="col"><button class="btn btn-primary btn-block" onclick="addToExpression(2)">2</button></div>
+            <div class="col"><button class="btn btn-primary btn-block" onclick="addToExpression(3)">3</button></div>
+            <div class="col"><button class="btn btn-secondary btn-block" onclick="addToExpression('*')">*</button></div>
+        </div>
+        <div class="row">
+            <div class="col"><button class="btn btn-primary btn-block" onclick="addToExpression(0)">0</button></div>
+            <div class="col"><button class="btn btn-primary btn-block" onclick="addToExpression('.')">.</button></div>
+            <div class="col"><button class="btn btn-primary btn-block" onclick="calculateResult()">=</button></div>
+            <div class="col"><button class="btn btn-secondary btn-block" onclick="addToExpression('/')">/</button></div>
+        </div>
+        <div class="row">
+            <div class="col"><button class="btn btn-secondary btn-block" onclick="clearExpression()">C</button></div>
+            <div class="col"><button class="btn btn-secondary btn-block" onclick="deleteLastCharacter()">&larr;</button></div>
+            <div class="col"><button class="btn btn-secondary btn-block" onclick="addToExpression('%')">%</button></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
